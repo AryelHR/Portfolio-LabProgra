@@ -612,3 +612,54 @@ footer {
 .footer-right a:hover {
   color: var(--cyan);
 }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #07070d !important;          /* negro sólido, sin transparencia */
+  z-index: 99;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+  padding: 80px 32px 40px;                 /* espacio para el navbar arriba */
+  backdrop-filter: none !important;        /* quitar blur */
+}
+
+#nav-toggle:checked ~ .mobile-menu {
+  display: flex !important;
+}
+
+.mobile-menu a {
+  font-family: "Space Mono", monospace;
+  font-size: 0.9rem;
+  color: #e8eaf0;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: color 0.2s, background 0.2s;
+  display: block;
+}
+
+.mobile-menu a:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-menu a:hover {
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.mobile-hire {
+  color: #00d4ff !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+}

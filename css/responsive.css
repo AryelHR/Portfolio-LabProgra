@@ -25,15 +25,17 @@
 
   /* Sobre mí: foto encima del texto */
   .about-grid {
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto !important;
   }
   .about-photo-wrap {
-    order: 1;
+    grid-row: 1 !important;
+    grid-column: 1 !important;
   }
   .about-text {
-    order: 2;
+    grid-row: 2 !important;
+    grid-column: 1 !important;
   }
   .about-photo {
     aspect-ratio: 4/3;
@@ -74,5 +76,10 @@
   }
   .footer-right {
     display: none;
+  }
+
+  /* Hamburger: forzar visibilidad del menú móvil */
+  #nav-toggle:checked ~ .mobile-menu {
+    display: flex !important;
   }
 }
