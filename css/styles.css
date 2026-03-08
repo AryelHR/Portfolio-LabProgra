@@ -637,12 +637,11 @@ footer {
   color: var(--cyan);
 }
 
-/* Ocultar el checkbox */
+/* HAMBURGER */
 #nav-toggle {
   display: none;
 }
 
-/* Hamburger dentro del nav */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -661,52 +660,50 @@ footer {
   border-radius: 2px;
 }
 
-/* Animación X — usando :has() en el body */
-body:has(#nav-toggle:checked) .hamburger span:nth-child(1) {
+#nav-toggle:checked ~ .hamburger span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-body:has(#nav-toggle:checked) .hamburger span:nth-child(2) {
+#nav-toggle:checked ~ .hamburger span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
-body:has(#nav-toggle:checked) .hamburger span:nth-child(3) {
+#nav-toggle:checked ~ .hamburger span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile menu cerrado */
+/* Dropdown pequeño debajo del navbar */
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 0;
+  top: 61px;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #07070d;
+  width: 100%;
+  /* SIN height ni min-height — solo ocupa lo que necesita */
+  background: #0e0e1a;
+  border-bottom: 1px solid #252540;
   z-index: 9998;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
-  padding: 80px 32px 40px;
+  padding: 8px 0;
 }
 
-/* Mobile menu abierto — selector hermano directo, ahora sí funciona */
 #nav-toggle:checked ~ .mobile-menu {
   display: flex;
 }
 
 .mobile-menu a {
   font-family: "Space Mono", monospace;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: #e8eaf0;
   text-decoration: none;
-  letter-spacing: 0.12em;
-  padding: 20px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  letter-spacing: 0.1em;
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   transition: color 0.2s, background 0.2s;
   display: block;
 }
-.mobile-menu a:first-child {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+.mobile-menu a:last-child {
+  border-bottom: none;
 }
 .mobile-menu a:hover,
 .mobile-menu a:active {
@@ -715,19 +712,11 @@ body:has(#nav-toggle:checked) .hamburger span:nth-child(3) {
 }
 .mobile-hire {
   color: #00d4ff !important;
-  border-top: none !important;
-  border-bottom: none !important;
-  margin-top: 20px;
-  text-align: center;
   font-weight: 700;
 }
 
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
-  }
-  .nav-links,
-  .nav-cta {
-    display: none;
   }
 }

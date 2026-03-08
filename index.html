@@ -17,26 +17,26 @@
   <nav>
         <a href="#hero" class="nav-logo"><span class="nav-dot"></span>dev.portfolio</a>
         <ul class="nav-links">
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
         <a href="mailto:andyaryelhernandez123@gmail.com" class="nav-cta">Contrátame</a>
-        <label class="hamburger" for="nav-toggle">
-        <span></span><span></span><span></span>
-        </label>
-    </nav>
 
-    <!-- input y mobile-menu FUERA del nav, hijos directos del body -->
-    <input type="checkbox" id="nav-toggle">
-    <div class="mobile-menu">
-        <a href="#about">Sobre mí</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
-        <a href="mailto:andyaryelhernandez123@gmail.com" class="mobile-hire">Contrátame ↗</a>
-    </div>
+        <input type="checkbox" id="nav-toggle">
+        <label class="hamburger" for="nav-toggle">
+            <span></span><span></span><span></span>
+        </label>
+        <div class="mobile-menu">
+            <a href="#about" onclick="document.getElementById('nav-toggle').checked=false">Sobre mí</a>
+            <a href="#skills" onclick="document.getElementById('nav-toggle').checked=false">Habilidades</a>
+            <a href="#projects" onclick="document.getElementById('nav-toggle').checked=false">Proyectos</a>
+            <a href="#contact" onclick="document.getElementById('nav-toggle').checked=false">Contacto</a>
+            <a href="mailto:andyaryelhernandez123@gmail.com" class="mobile-hire">Contrátame ↗</a>
+        </div>
+
+    </nav>
 
   <section id="hero">
     <div class="grid-bg"></div>
