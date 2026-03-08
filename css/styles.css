@@ -233,7 +233,6 @@ nav {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
   background: #07070d;
   z-index: 150;
   flex-direction: column;
