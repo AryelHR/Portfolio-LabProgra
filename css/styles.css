@@ -226,7 +226,6 @@ nav {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Menú cerrado */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -239,10 +238,8 @@ nav {
   align-items: stretch;
   justify-content: center;
   padding: 80px 32px 40px;
-  /* Sin backdrop-filter ni rgba — fondo sólido */
 }
 
-/* Menú abierto */
 #nav-toggle:checked ~ .mobile-menu {
   display: flex;
 }
@@ -284,7 +281,6 @@ nav {
   }
 }
 
-/* SECCIONES — base */
 section {
   padding: 100px 6vw;
   position: relative;
