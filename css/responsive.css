@@ -1,0 +1,60 @@
+
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .avail-badge,
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btns,
+  .hero-socials {
+    justify-content: center;
+  }
+  .hero-photo-wrap {
+    order: -1;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-photo-ring {
+    width: 220px;
+    height: 220px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-photo {
+    aspect-ratio: 4/3;
+    max-height: 260px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-socials {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-right {
+    display: none;
+  }
+}
