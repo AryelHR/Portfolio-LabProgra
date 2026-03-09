@@ -57,7 +57,7 @@
 
   /* STATS */
   .stats-row {
-    grid-template-columns: repeat(3, 1fr); /* las 3 columnas en una fila */
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
   .stat-card {
@@ -65,13 +65,12 @@
     text-align: center;
   }
   .stat-num {
-    font-size: 1.6rem; /* número más pequeño */
+    font-size: 1.6rem;
   }
   .stat-label {
-    font-size: 0.65rem; /* texto debajo más compacto */
+    font-size: 0.65rem;
   }
 
-  /* PROYECTOS — siempre vertical en móvil */
   .projects-grid {
     display: flex !important;
     flex-direction: column !important;
