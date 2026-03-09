@@ -58,17 +58,20 @@
   /* STATS */
   .stats-row {
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 6px;
   }
   .stat-card {
-    padding: 16px 8px;
-    text-align: center;
+    padding: 10px 4px !important;
+    border-radius: 8px;
   }
   .stat-num {
-    font-size: 1.6rem;
+    font-size: 1rem !important;
+    line-height: 1;
   }
   .stat-label {
-    font-size: 0.65rem;
+    font-size: 0.5rem !important;
+    letter-spacing: 0.04em;
+    margin-top: 4px;
   }
 
   .projects-grid {
