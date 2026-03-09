@@ -57,7 +57,18 @@
 
   /* STATS */
   .stats-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr); /* las 3 columnas en una fila */
+    gap: 12px;
+  }
+  .stat-card {
+    padding: 16px 8px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 1.6rem; /* número más pequeño */
+  }
+  .stat-label {
+    font-size: 0.65rem; /* texto debajo más compacto */
   }
 
   /* PROYECTOS — siempre vertical en móvil */
@@ -96,7 +107,6 @@
     object-fit: cover;
   }
 }
-
 
 /* Tablet: proyectos en 2 columnas, nav visible */
 @media (min-width: 769px) and (max-width: 1024px) {
