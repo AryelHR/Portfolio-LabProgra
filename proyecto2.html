@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>NORR Studio — Catálogo</title>
+  <link rel="stylesheet" href="css/proyect2.css" >
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">NORR Studio</a>
+
+        <ul class="nav__links">
+          <li><a href="#">Mujer</a></li>
+          <li><a href="#" class="active">Hombre</a></li>
+          <li><a href="#">Accesorios</a></li>
+          <li><a href="#">Campaña</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <div class="nav__search">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" placeholder="Buscar prendas..." >
+          </div>
+
+          <a href="#" class="nav__cart">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            Bolsa
+            <span class="cart-count">3</span>
+          </a>
+        </div>
+
+        <div class="nav__hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       PAGE HEADER
+       ============================================================ -->
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header__inner">
+        <div class="page-header__text">
+          <span class="label">Catálogo — Hombre</span>
+          <h1>Colección <em>Ártica</em></h1>
+        </div>
+
+        <div class="page-header__meta">
+          <span class="page-header__count">48 prendas</span>
+
+          <div class="page-header__sort">
+            <label for="sort">Ordenar:</label>
+            <select id="sort" class="sort-select">
+              <option>Destacados</option>
+              <option>Precio: menor a mayor</option>
+              <option>Precio: mayor a menor</option>
+              <option>Más nuevos</option>
+              <option>Más vendidos</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       MAIN LAYOUT
+       ============================================================ -->
+  <div class="catalog-layout">
+
+    <!-- ==================== SIDEBAR ====================  -->
+    <aside class="sidebar">
+      <div class="sidebar__title">
+        Filtros
+        <span class="sidebar__clear">Limpiar todo</span>
+      </div>
+
+      <!-- Categoría -->
+      <div class="filter-group">
+        <p class="filter-group__title">Categoría</p>
+        <ul class="filter-list">
+          <li class="filter-item">
+            <label class="filter-item__label">
+              <input type="checkbox" checked > Blazers
+            </label>
+            <span class="filter-item__count">12</span>
+          </li>
+          <li class="filter-item">
+            <label class="filter-item__label">
+              <input type="checkbox" > Camisas
+            </label>
+            <span class="filter-item__count">18</span>
+          </li>
+          <li class="filter-item">
+            <label class="filter-item__label">
+              <input type="checkbox" checked > Pantalones
+            </label>
+            <span class="filter-item__count">14</span>
+          </li>
+          <li class="filter-item">
+            <label class="filter-item__label">
+              <input type="checkbox" > Abrigos
+            </label>
+            <span class="filter-item__count">8</span>
+          </li>
+          <li class="filter-item">
+            <label class="filter-item__label">
+              <input type="checkbox" > Accesorios
+            </label>
+            <span class="filter-item__count">22</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Talla -->
+      <div class="filter-group">
+        <p class="filter-group__title">Talla</p>
+        <div class="size-grid">
+          <span class="size-btn">XS</span>
+          <span class="size-btn selected">S</span>
+          <span class="size-btn selected">M</span>
+          <span class="size-btn">L</span>
+          <span class="size-btn">XL</span>
+          <span class="size-btn">XXL</span>
+          <span class="size-btn">38</span>
+          <span class="size-btn">40</span>
+          <span class="size-btn">42</span>
+          <span class="size-btn">44</span>
+          <span class="size-btn">46</span>
+          <span class="size-btn">48</span>
+        </div>
+      </div>
+
+      <!-- Color -->
+      <div class="filter-group">
+        <p class="filter-group__title">Color</p>
+        <div class="color-list">
+          <span class="color-swatch color-swatch--negro selected" title="Negro"></span>
+          <span class="color-swatch color-swatch--blanco" title="Blanco"></span>
+          <span class="color-swatch color-swatch--camel selected" title="Camel"></span>
+          <span class="color-swatch color-swatch--gris" title="Gris"></span>
+          <span class="color-swatch color-swatch--navy" title="Navy"></span>
+          <span class="color-swatch color-swatch--tostado" title="Tostado"></span>
+          <span class="color-swatch color-swatch--crem" title="Crema"></span>
+          <span class="color-swatch color-swatch--verde" title="Verde oliva"></span>
+        </div>
+      </div>
+
+      <!-- Precio -->
+      <div class="filter-group">
+        <p class="filter-group__title">Precio</p>
+        <div class="price-range">
+          <input type="range" min="0" max="500" value="320" >
+          <div class="price-labels">
+            <span>$0</span>
+            <span>Hasta $320</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colección -->
+      <div class="filter-group">
+        <p class="filter-group__title">Colección</p>
+        <ul class="filter-list">
+          <li class="filter-item">
+            <label class="filter-item__label">
+              <input type="checkbox" checked > Primavera 2025
+            </label>
+            <span class="filter-item__count">34</span>
+          </li>
+          <li class="filter-item">
+            <label class="filter-item__label">
+              <input type="checkbox" > Otoño 2024
+            </label>
+            <span class="filter-item__count">28</span>
+          </li>
+          <li class="filter-item">
+            <label class="filter-item__label">
+              <input type="checkbox" > Esenciales
+            </label>
+            <span class="filter-item__count">16</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <!-- ==================== CATALOG MAIN ====================  -->
+    <main class="catalog-main">
+
+      <!-- Active filters -->
+      <div class="active-filters">
+        <span class="label">Filtros activos:</span>
+        <span class="active-filter">Blazers <span class="active-filter__x">&times;</span></span>
+        <span class="active-filter">Pantalones <span class="active-filter__x">&times;</span></span>
+        <span class="active-filter">S / M <span class="active-filter__x">&times;</span></span>
+        <span class="active-filter">Negro, Camel <span class="active-filter__x">&times;</span></span>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="products-grid">
+
+        <!-- Card 1 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <div class="product-card__img-placeholder">
+              <span class="product-card__img-label">Blazer</span>
+            </div>
+            <span class="product-card__badge product-card__badge--new">Nuevo</span>
+            <div class="product-card__wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="product-card__quick-add">Añadir a la bolsa</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Blazers</span>
+            <h3 class="product-card__name">Blazer Milano de doble botonadura</h3>
+            <div class="product-card__colors">
+              <span class="product-card__color product-card__color--negro"></span>
+              <span class="product-card__color product-card__color--camel"></span>
+              <span class="product-card__color product-card__color--navy"></span>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price">$189</span>
+              <div class="product-card__sizes">
+                <span class="size-tag">S</span>
+                <span class="size-tag">M</span>
+                <span class="size-tag">L</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <div class="product-card__img-placeholder">
+              <span class="product-card__img-label">Pantalón</span>
+            </div>
+            <span class="product-card__badge product-card__badge--sale">–25%</span>
+            <div class="product-card__wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="product-card__quick-add">Añadir a la bolsa</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Pantalones</span>
+            <h3 class="product-card__name">Pantalón slim de lana italiana</h3>
+            <div class="product-card__colors">
+              <span class="product-card__color product-card__color--negro"></span>
+              <span class="product-card__color product-card__color--gris"></span>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price">$112 <span class="product-card__price-old">$149</span></span>
+              <div class="product-card__sizes">
+                <span class="size-tag">40</span>
+                <span class="size-tag">42</span>
+                <span class="size-tag">44</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <div class="product-card__img-placeholder">
+              <span class="product-card__img-label">Abrigo</span>
+            </div>
+            <div class="product-card__wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="product-card__quick-add">Añadir a la bolsa</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Abrigos</span>
+            <h3 class="product-card__name">Abrigo oversize camel con cinturón</h3>
+            <div class="product-card__colors">
+              <span class="product-card__color product-card__color--camel"></span>
+              <span class="product-card__color product-card__color--negro"></span>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price">$295</span>
+              <div class="product-card__sizes">
+                <span class="size-tag">S</span>
+                <span class="size-tag">M</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <div class="product-card__img-placeholder">
+              <span class="product-card__img-label">Camisa</span>
+            </div>
+            <span class="product-card__badge product-card__badge--new">Nuevo</span>
+            <div class="product-card__wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="product-card__quick-add">Añadir a la bolsa</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Camisas</span>
+            <h3 class="product-card__name">Camisa de lino manga larga</h3>
+            <div class="product-card__colors">
+              <span class="product-card__color product-card__color--blanco"></span>
+              <span class="product-card__color product-card__color--camel"></span>
+              <span class="product-card__color product-card__color--verde"></span>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price">$89</span>
+              <div class="product-card__sizes">
+                <span class="size-tag">S</span>
+                <span class="size-tag">M</span>
+                <span class="size-tag">L</span>
+                <span class="size-tag">XL</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <div class="product-card__img-placeholder">
+              <span class="product-card__img-label">Blazer</span>
+            </div>
+            <span class="product-card__badge product-card__badge--sale">–30%</span>
+            <div class="product-card__wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="product-card__quick-add">Añadir a la bolsa</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Blazers</span>
+            <h3 class="product-card__name">Blazer cruzado estructura firme</h3>
+            <div class="product-card__colors">
+              <span class="product-card__color product-card__color--navy"></span>
+              <span class="product-card__color product-card__color--gris"></span>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price">$155 <span class="product-card__price-old">$220</span></span>
+              <div class="product-card__sizes">
+                <span class="size-tag">M</span>
+                <span class="size-tag">L</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <div class="product-card__img-placeholder">
+              <span class="product-card__img-label">Pantalón</span>
+            </div>
+            <div class="product-card__wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="product-card__quick-add">Añadir a la bolsa</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Pantalones</span>
+            <h3 class="product-card__name">Pantalón wide leg algodón premium</h3>
+            <div class="product-card__colors">
+              <span class="product-card__color product-card__color--negro"></span>
+              <span class="product-card__color product-card__color--camel"></span>
+              <span class="product-card__color product-card__color--blanco"></span>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price">$98</span>
+              <div class="product-card__sizes">
+                <span class="size-tag">40</span>
+                <span class="size-tag">42</span>
+                <span class="size-tag">44</span>
+                <span class="size-tag">46</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <div class="product-card__img-placeholder">
+              <span class="product-card__img-label">Camisa</span>
+            </div>
+            <div class="product-card__wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="product-card__quick-add">Añadir a la bolsa</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Camisas</span>
+            <h3 class="product-card__name">Camisa Oxford cuello italiano</h3>
+            <div class="product-card__colors">
+              <span class="product-card__color product-card__color--blanco"></span>
+              <span class="product-card__color product-card__color--negro"></span>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price">$75</span>
+              <div class="product-card__sizes">
+                <span class="size-tag">S</span>
+                <span class="size-tag">M</span>
+                <span class="size-tag">L</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <div class="product-card__img-placeholder">
+              <span class="product-card__img-label">Abrigo</span>
+            </div>
+            <span class="product-card__badge product-card__badge--sale">–20%</span>
+            <div class="product-card__wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="product-card__quick-add">Añadir a la bolsa</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Abrigos</span>
+            <h3 class="product-card__name">Trench gabardina clásico</h3>
+            <div class="product-card__colors">
+              <span class="product-card__color product-card__color--camel"></span>
+              <span class="product-card__color product-card__color--negro"></span>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price">$240 <span class="product-card__price-old">$300</span></span>
+              <div class="product-card__sizes">
+                <span class="size-tag">M</span>
+                <span class="size-tag">L</span>
+                <span class="size-tag">XL</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <div class="product-card__img-placeholder">
+              <span class="product-card__img-label">Blazer</span>
+            </div>
+            <span class="product-card__badge product-card__badge--new">Nuevo</span>
+            <div class="product-card__wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="product-card__quick-add">Añadir a la bolsa</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Blazers</span>
+            <h3 class="product-card__name">Blazer textura tweed contemporáneo</h3>
+            <div class="product-card__colors">
+              <span class="product-card__color product-card__color--verde"></span>
+              <span class="product-card__color product-card__color--gris"></span>
+              <span class="product-card__color product-card__color--camel"></span>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price">$210</span>
+              <div class="product-card__sizes">
+                <span class="size-tag">S</span>
+                <span class="size-tag">M</span>
+                <span class="size-tag">L</span>
+                <span class="size-tag">XL</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- / products-grid -->
+
+      <!-- Pagination -->
+      <nav class="pagination" aria-label="Paginación del catálogo">
+        <span class="page-btn page-btn--arrow">&lsaquo;</span>
+        <span class="page-btn active">1</span>
+        <span class="page-btn">2</span>
+        <span class="page-btn">3</span>
+        <span class="page-btn">4</span>
+        <span class="page-btn">5</span>
+        <span class="page-btn page-btn--arrow">&rsaquo;</span>
+      </nav>
+
+    </main>
+    <!-- / catalog-main -->
+
+  </div>
+  <!-- / catalog-layout -->
+
+</body>
+</html>

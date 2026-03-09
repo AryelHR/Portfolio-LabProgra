@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Volta — Design System</title>
+  <link rel="stylesheet" href="css/proyecto3.css" >
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ============================================================
+       SIDEBAR
+       ============================================================ -->
+  <nav class="sidebar" aria-label="Navegación del design system">
+    <div class="sidebar__brand">
+      <span class="sidebar__logo">Volta</span>
+      <span class="sidebar__version">Design System v2.4.0</span>
+    </div>
+
+    <div class="sidebar__nav">
+      <p class="sidebar__section-title">Fundamentos</p>
+      <a href="#colors"     class="sidebar__link active">
+        <span class="sidebar__dot"></span> Colores
+      </a>
+      <a href="#typography" class="sidebar__link">
+        <span class="sidebar__dot"></span> Tipografía
+      </a>
+      <a href="#spacing"    class="sidebar__link">
+        <span class="sidebar__dot"></span> Espaciado
+      </a>
+      <a href="#icons"      class="sidebar__link">
+        <span class="sidebar__dot"></span> Iconografía
+      </a>
+
+      <p class="sidebar__section-title">Componentes</p>
+      <a href="#buttons"  class="sidebar__link">
+        <span class="sidebar__dot"></span> Botones
+      </a>
+      <a href="#forms"    class="sidebar__link">
+        <span class="sidebar__dot"></span> Formularios
+      </a>
+      <a href="#badges"   class="sidebar__link">
+        <span class="sidebar__dot"></span> Badges &amp; Tags
+      </a>
+      <a href="#alerts"   class="sidebar__link">
+        <span class="sidebar__dot"></span> Alertas
+      </a>
+    </div>
+
+    <div class="sidebar__footer">
+      Volta &copy; 2025 — v2.4.0
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <div class="main">
+
+    <!-- Top bar -->
+    <div class="topbar">
+      <div class="topbar__breadcrumb">
+        Volta DS &rsaquo; <span>Fundamentos</span>
+      </div>
+      <div class="topbar__actions">
+        <span class="topbar__badge">Figma</span>
+        <span class="topbar__badge">GitHub</span>
+        <span class="topbar__badge">v2.4.0</span>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+
+      <!-- ====================================================
+           COLORS
+           ==================================================== -->
+      <section class="section-block" id="colors" aria-labelledby="colors-title">
+        <div class="section-header">
+          <h2 class="section-title" id="colors-title">Colores</h2>
+          <span class="section-desc">Brand + Semantic + Neutrals</span>
+        </div>
+
+        <!-- Brand & Semantic -->
+        <div class="colors-grid">
+          <div class="color-chip">
+            <div class="color-chip__swatch swatch--ink"></div>
+            <div class="color-chip__info">
+              <span class="color-chip__name">Ink</span>
+              <span class="color-chip__hex">#0d0d0d — --ink</span>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch swatch--primary"></div>
+            <div class="color-chip__info">
+              <span class="color-chip__name">Primary</span>
+              <span class="color-chip__hex">#e63c2f — --primary</span>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch swatch--paper"></div>
+            <div class="color-chip__info">
+              <span class="color-chip__name">Paper</span>
+              <span class="color-chip__hex">#f4f4f0 — --paper</span>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch swatch--success"></div>
+            <div class="color-chip__info">
+              <span class="color-chip__name">Success</span>
+              <span class="color-chip__hex">#2a7a4b — --success</span>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch swatch--warning"></div>
+            <div class="color-chip__info">
+              <span class="color-chip__name">Warning</span>
+              <span class="color-chip__hex">#d97c10 — --warning</span>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch swatch--info"></div>
+            <div class="color-chip__info">
+              <span class="color-chip__name">Info</span>
+              <span class="color-chip__hex">#1e5fa3 — --info</span>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch swatch--danger"></div>
+            <div class="color-chip__info">
+              <span class="color-chip__name">Danger</span>
+              <span class="color-chip__hex">#c0392b — --danger</span>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch swatch--n400"></div>
+            <div class="color-chip__info">
+              <span class="color-chip__name">Neutral 400</span>
+              <span class="color-chip__hex">#a8a8a0 — --n400</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Neutral scale -->
+        <div class="neutrals-row">
+          <div class="neutral-chip neutral-chip--100"><span class="neutral-chip__label">100</span></div>
+          <div class="neutral-chip neutral-chip--200"><span class="neutral-chip__label">200</span></div>
+          <div class="neutral-chip neutral-chip--300"><span class="neutral-chip__label">300</span></div>
+          <div class="neutral-chip neutral-chip--400"><span class="neutral-chip__label">400</span></div>
+          <div class="neutral-chip neutral-chip--500"><span class="neutral-chip__label">500</span></div>
+          <div class="neutral-chip neutral-chip--600"><span class="neutral-chip__label">600</span></div>
+          <div class="neutral-chip neutral-chip--700"><span class="neutral-chip__label">700</span></div>
+          <div class="neutral-chip neutral-chip--800"><span class="neutral-chip__label">800</span></div>
+          <div class="neutral-chip neutral-chip--900"><span class="neutral-chip__label">900</span></div>
+        </div>
+      </section>
+
+
+      <!-- ====================================================
+           TYPOGRAPHY
+           ==================================================== -->
+      <section class="section-block" id="typography" aria-labelledby="typography-title">
+        <div class="section-header">
+          <h2 class="section-title" id="typography-title">Tipografía</h2>
+          <span class="section-desc">Syne + IBM Plex Mono</span>
+        </div>
+
+        <div class="type-stack">
+          <div class="type-row">
+            <div class="type-row__meta">
+              <strong>Display 1</strong>
+              3rem / 800
+            </div>
+            <div class="type-row__sample type-d1">Volta</div>
+            <div class="type-row__code">
+              font-size: 3rem<br>
+              font-weight: 800
+            </div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-row__meta">
+              <strong>Display 2</strong>
+              2rem / 700
+            </div>
+            <div class="type-row__sample type-d2">Design System</div>
+            <div class="type-row__code">
+              font-size: 2rem<br>
+              font-weight: 700
+            </div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-row__meta">
+              <strong>Heading 1</strong>
+              1.5rem / 600
+            </div>
+            <div class="type-row__sample type-h1">Componentes UI</div>
+            <div class="type-row__code">
+              font-size: 1.5rem<br>
+              font-weight: 600
+            </div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-row__meta">
+              <strong>Heading 2</strong>
+              1.2rem / 600
+            </div>
+            <div class="type-row__sample type-h2">Paleta de colores</div>
+            <div class="type-row__code">
+              font-size: 1.2rem<br>
+              font-weight: 600
+            </div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-row__meta">
+              <strong>Heading 3</strong>
+              1rem / 600
+            </div>
+            <div class="type-row__sample type-h3">Variantes de botón</div>
+            <div class="type-row__code">
+              font-size: 1rem<br>
+              font-weight: 600
+            </div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-row__meta">
+              <strong>Body</strong>
+              0.938rem / 400
+            </div>
+            <div class="type-row__sample type-body">El design system unifica criterios visuales y de interacción.</div>
+            <div class="type-row__code">
+              font-size: 0.938rem<br>
+              font-weight: 400
+            </div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-row__meta">
+              <strong>Small</strong>
+              0.813rem / 400
+            </div>
+            <div class="type-row__sample type-sm">Texto de apoyo y notas secundarias en la interfaz.</div>
+            <div class="type-row__code">
+              font-size: 0.813rem<br>
+              font-weight: 400
+            </div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-row__meta">
+              <strong>Mono</strong>
+              0.813rem / 400
+            </div>
+            <div class="type-row__sample type-mono">const color = '#e63c2f';</div>
+            <div class="type-row__code">
+              IBM Plex Mono<br>
+              font-size: 0.813rem
+            </div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-row__meta">
+              <strong>Label</strong>
+              0.688rem / 600
+            </div>
+            <div class="type-row__sample type-label">Etiqueta de sección</div>
+            <div class="type-row__code">
+              font-size: 0.688rem<br>
+              letter-spacing: 0.14em
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ====================================================
+           BUTTONS
+           ==================================================== -->
+      <section class="section-block" id="buttons" aria-labelledby="buttons-title">
+        <div class="section-header">
+          <h2 class="section-title" id="buttons-title">Botones</h2>
+          <span class="section-desc">Variantes + Tamaños + Estados</span>
+        </div>
+
+        <div class="buttons-group">
+
+          <!-- Variantes -->
+          <div class="buttons-row">
+            <span class="btn-label">Variantes</span>
+            <button type="button" class="btn btn--md btn--primary">Primary</button>
+            <button type="button" class="btn btn--md btn--secondary">Secondary</button>
+            <button type="button" class="btn btn--md btn--outline">Outline</button>
+            <button type="button" class="btn btn--md btn--ghost">Ghost</button>
+            <button type="button" class="btn btn--md btn--danger">Danger</button>
+            <button type="button" class="btn btn--md btn--disabled">Disabled</button>
+          </div>
+
+          <!-- Tamaños -->
+          <div class="buttons-row">
+            <span class="btn-label">Tamaños</span>
+            <button type="button" class="btn btn--sm btn--primary">Small</button>
+            <button type="button" class="btn btn--md btn--primary">Medium</button>
+            <button type="button" class="btn btn--lg btn--primary">Large</button>
+            <button type="button" class="btn btn--xl btn--primary">X-Large</button>
+          </div>
+
+          <!-- Con íconos -->
+          <div class="buttons-row">
+            <span class="btn-label">Con ícono</span>
+            <button type="button" class="btn btn--md btn--primary">
+              <svg class="btn__icon" viewBox="0 0 24 24">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              Nuevo
+            </button>
+            <button type="button" class="btn btn--md btn--outline">
+              <svg class="btn__icon" viewBox="0 0 24 24">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Exportar
+            </button>
+            <button type="button" class="btn btn--md btn--ghost">
+              <svg class="btn__icon" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              Buscar
+            </button>
+            <button type="button" class="btn btn--md btn--icon" aria-label="Configuración">
+              <svg class="btn__icon" viewBox="0 0 24 24" style="display:block">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.07 4.93a10 10 0 0 0-14.14 0M4.93 19.07a10 10 0 0 0 14.14 0"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Dark background -->
+          <div class="buttons-row buttons-row--dark">
+            <span class="btn-label">Dark bg</span>
+            <button type="button" class="btn btn--md btn--primary">Primary</button>
+            <button type="button" class="btn btn--md btn--outline btn--outline-light">Outline</button>
+            <button type="button" class="btn btn--md btn--ghost btn--ghost-light">Ghost</button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ====================================================
+           FORMS
+           ==================================================== -->
+      <section class="section-block" id="forms" aria-labelledby="forms-title">
+        <div class="section-header">
+          <h2 class="section-title" id="forms-title">Formularios</h2>
+          <span class="section-desc">Inputs + Select + Checkbox + Radio</span>
+        </div>
+
+        <div class="forms-grid">
+
+          <!-- Panel 1: States -->
+          <div class="form-panel">
+            <p class="form-panel__title">Estados de input</p>
+
+            <div class="field">
+              <label class="field__label" for="input-default">Default</label>
+              <input id="input-default" type="text" class="field__input" placeholder="Escribe algo..." >
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="input-filled">Filled</label>
+              <input id="input-filled" type="text" class="field__input" value="Valor ingresado" >
+              <span class="field__hint">Texto de ayuda o descripción del campo</span>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="input-error">
+                Error <span class="field__required">*</span>
+              </label>
+              <input id="input-error" type="text" class="field__input field__input--error" value="correo invalido" >
+              <span class="field__hint field__hint--error">El formato del correo no es válido</span>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="input-success">Validado</label>
+              <input id="input-success" type="text" class="field__input field__input--success" value="usuario@correo.com" >
+              <span class="field__hint field__hint--success">Correo verificado correctamente</span>
+            </div>
+          </div>
+
+          <!-- Panel 2: Controls -->
+          <div class="form-panel">
+            <p class="form-panel__title">Controles</p>
+
+            <div class="field">
+              <label class="field__label" for="select-cat">Select</label>
+              <select id="select-cat" class="field__select">
+                <option>Selecciona una opción</option>
+                <option selected>Blazers</option>
+                <option>Pantalones</option>
+                <option>Camisas</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="textarea-desc">Textarea</label>
+              <textarea id="textarea-desc" class="field__textarea" placeholder="Descripción del producto..."></textarea>
+            </div>
+
+            <div class="field">
+              <p class="field__label">Checkboxes</p>
+              <div class="check-group">
+                <label class="check-item">
+                  <input type="checkbox" checked > Envío gratis
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" checked > En descuento
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" > Edición limitada
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="field__label">Radio buttons</p>
+              <div class="check-group">
+                <label class="check-item">
+                  <input type="radio" name="talla" checked > Talla S
+                </label>
+                <label class="check-item">
+                  <input type="radio" name="talla" > Talla M
+                </label>
+                <label class="check-item">
+                  <input type="radio" name="talla" > Talla L
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ====================================================
+           BADGES
+           ==================================================== -->
+      <section class="section-block" id="badges" aria-labelledby="badges-title">
+        <div class="section-header">
+          <h2 class="section-title" id="badges-title">Badges &amp; Tags</h2>
+          <span class="section-desc">Estado + Semántica + Neutros</span>
+        </div>
+
+        <div class="badges-wrap">
+          <span class="badge badge--primary"><span class="badge__dot"></span> Primary</span>
+          <span class="badge badge--success"><span class="badge__dot"></span> Success</span>
+          <span class="badge badge--warning"><span class="badge__dot"></span> Warning</span>
+          <span class="badge badge--info"><span class="badge__dot"></span> Info</span>
+          <span class="badge badge--danger"><span class="badge__dot"></span> Danger</span>
+          <span class="badge badge--neutral">Neutral</span>
+          <span class="badge badge--dark">Dark</span>
+          <span class="badge badge--outline">Outline</span>
+          <span class="badge badge--primary">Nuevo</span>
+          <span class="badge badge--success">Verificado</span>
+          <span class="badge badge--warning">Pendiente</span>
+          <span class="badge badge--danger">Agotado</span>
+          <span class="badge badge--neutral">Archivado</span>
+          <span class="badge badge--dark">Edición limitada</span>
+        </div>
+      </section>
+
+
+      <!-- ====================================================
+           ALERTS
+           ==================================================== -->
+      <section class="section-block" id="alerts" aria-labelledby="alerts-title">
+        <div class="section-header">
+          <h2 class="section-title" id="alerts-title">Alertas</h2>
+          <span class="section-desc">Info · Success · Warning · Danger</span>
+        </div>
+
+        <div class="alerts-stack">
+          <div class="alert alert--info" role="status">
+            <svg class="alert__icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <div class="alert__body">
+              <p class="alert__title">Información</p>
+              <p class="alert__text">Tu pedido está siendo procesado. Recibirás una confirmación por correo en los próximos minutos.</p>
+            </div>
+          </div>
+
+          <div class="alert alert--success" role="status">
+            <svg class="alert__icon" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <div class="alert__body">
+              <p class="alert__title">Éxito</p>
+              <p class="alert__text">Los cambios han sido guardados correctamente. El catálogo se actualizará en los próximos segundos.</p>
+            </div>
+          </div>
+
+          <div class="alert alert--warning" role="alert">
+            <svg class="alert__icon" viewBox="0 0 24 24">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <div class="alert__body">
+              <p class="alert__title">Atención</p>
+              <p class="alert__text">Solo quedan 3 unidades disponibles de este producto. Completa tu compra antes de que se agote.</p>
+            </div>
+          </div>
+
+          <div class="alert alert--danger" role="alert">
+            <svg class="alert__icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="15" y1="9" x2="9" y2="15"/>
+              <line x1="9" y1="9" x2="15" y2="15"/>
+            </svg>
+            <div class="alert__body">
+              <p class="alert__title">Error</p>
+              <p class="alert__text">No se pudo completar la transacción. Verifica los datos de tu tarjeta e intenta nuevamente.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ====================================================
+           SPACING
+           ==================================================== -->
+      <section class="section-block" id="spacing" aria-labelledby="spacing-title">
+        <div class="section-header">
+          <h2 class="section-title" id="spacing-title">Espaciado</h2>
+          <span class="section-desc">Base 4px scale</span>
+        </div>
+
+        <div class="spacing-grid">
+          <div class="spacing-chip sp-4">
+            <div class="spacing-chip__block"></div>
+            <div class="spacing-chip__label"><strong>4px</strong>sp-1</div>
+          </div>
+          <div class="spacing-chip sp-8">
+            <div class="spacing-chip__block"></div>
+            <div class="spacing-chip__label"><strong>8px</strong>sp-2</div>
+          </div>
+          <div class="spacing-chip sp-12">
+            <div class="spacing-chip__block"></div>
+            <div class="spacing-chip__label"><strong>12px</strong>sp-3</div>
+          </div>
+          <div class="spacing-chip sp-16">
+            <div class="spacing-chip__block"></div>
+            <div class="spacing-chip__label"><strong>16px</strong>sp-4</div>
+          </div>
+          <div class="spacing-chip sp-24">
+            <div class="spacing-chip__block"></div>
+            <div class="spacing-chip__label"><strong>24px</strong>sp-6</div>
+          </div>
+          <div class="spacing-chip sp-32">
+            <div class="spacing-chip__block"></div>
+            <div class="spacing-chip__label"><strong>32px</strong>sp-8</div>
+          </div>
+          <div class="spacing-chip sp-48">
+            <div class="spacing-chip__block"></div>
+            <div class="spacing-chip__label"><strong>48px</strong>sp-12</div>
+          </div>
+          <div class="spacing-chip sp-64">
+            <div class="spacing-chip__block"></div>
+            <div class="spacing-chip__label"><strong>64px</strong>sp-16</div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ====================================================
+           ICONS
+           ==================================================== -->
+      <section class="section-block" id="icons" aria-labelledby="icons-title">
+        <div class="section-header">
+          <h2 class="section-title" id="icons-title">Iconografía</h2>
+          <span class="section-desc">24×24 / stroke 1.8</span>
+        </div>
+
+        <div class="icons-grid">
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span class="icon-chip__name">home</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span class="icon-chip__name">search</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="icon-chip__name">user</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="icon-chip__name">bag</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="icon-chip__name">heart</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="icon-chip__name">plus</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+            <span class="icon-chip__name">trash</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            <span class="icon-chip__name">edit</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 0-14.14 0M4.93 19.07a10 10 0 0 0 14.14 0"/></svg>
+            <span class="icon-chip__name">settings</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="icon-chip__name">check</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span class="icon-chip__name">x</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            <span class="icon-chip__name">chevron-r</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            <span class="icon-chip__name">chevron-l</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            <span class="icon-chip__name">chevron-d</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span class="icon-chip__name">download</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            <span class="icon-chip__name">upload</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span class="icon-chip__name">grid</span>
+          </div>
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            <span class="icon-chip__name">list</span>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+    <!-- / content -->
+  </div>
+  <!-- / main -->
+
+</div>
+<!-- / layout -->
+
+</body>
+</html>
