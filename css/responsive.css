@@ -79,7 +79,24 @@
   .footer-right {
     display: none;
   }
+
+  .project-thumb {
+    position: relative;
+    width: 100%;
+    height: 200px; /* altura fija en móvil */
+    aspect-ratio: unset;
+  }
+
+  .project-thumb-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
+
 
 /* Tablet: proyectos en 2 columnas, nav visible */
 @media (min-width: 769px) and (max-width: 1024px) {
